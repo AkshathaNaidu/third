@@ -1,0 +1,50 @@
+<html lang="en" ng-app="myApp">
+	<head>
+		<title>Flex-box</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="parent">
+				<div class="child" ng-controller="employeedatacntrl">
+					<div class="employee-table">
+						<table>
+							<tr>
+								<th>Name</th>
+								<th>Class</th>
+								<th>Email</th>
+								<th>Test</th>
+								<th>Cell</th>
+							</tr>
+							<tr ng-repeat="data in testdata">
+								<td>{{data.name}}</td>
+								<td>{{data.class}}</td>
+								<td>{{data.email}}</td>
+								<td>{{data.test}}</td>
+								<td>{{data.cell}}</td>
+							</tr>
+						</table>
+					</div>
+					{{testdata}}
+				</div>
+				
+					<div class="child1" ng-controller="firstController">{{name}}
+						<!-- <first-directive></first-directive> -->
+						<div class="first-directive">
+
+						</div>
+						
+					</div>
+					<div class="child2" ng-controller="secondController">
+						{{name}}
+					<h1>{{fullname|uppercase}}</h1>
+
+					
+				</div>
+				
+			</div>
+		</div>
+		<script src="js/angular.min.js"></script>
+		<script src="js/all.js"></script>
+	</body>
+</html>
